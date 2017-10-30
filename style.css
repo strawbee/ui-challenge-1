@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("reset.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ff9bac;
+  color: #ffe0e8;
+  line-height: 1.3em;
+  letter-spacing: .05em;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  background: #d6446b;
+  border-right: solid 1px;
+  border-left: solid 1px;
+  border-bottom: solid 1px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[class*="col-m-"]:not(:first-of-type) { border-left: none; }
+
+/* MOBILE */
+#wrapper {
+  margin: 30px auto;
+  width: 480px;
+}
+
+.col-m-1 { width: 240px; }
+.col-m-2 {width: 480px; }
+
+#div-a {
+  height: 75px;
+  border-top: solid 1px;
+}
+#div-b { height: 150px; }
+#div-c { height: 125px; }
+#div-d { height: 125px; }
+#div-e {height: 250px; }
+#div-f {height: 250px; }
+#div-g {height: 250px; }
+#div-h {height: 250px; }
+#div-i {height: 80px; }
+
+/* DESKTOP */
+@media only screen and (min-width: 980px) {
+  /* My web design ethics is not compatible with having a breakpoint at 800px when the layout is 960px wide; please consult me for more information. I'm happy to create a new breakpoint for you for screen widths between 800-960px if you wish, at no charge. */
+  #wrapper {
+    width: 960px;
+  }
+
+  [class*="col-m-"] {
+    width: auto;
+  }
+
+  .clearfix-m {
+    clear: right;
+  }
+
+  .col-1 { width: 190px; }
+  .col-2 { width: 380px; }
+  .col-3 { width: 570px; }
+  .col-4 { width: 760px; }
+  .col-5 { width: 960px; }
+
+  #div-a {
+    height: 100px;
+    border-top: solid 1px;
+  }
+  #div-b {
+    height: 600px;
+    width: 200px;
+    clear: none;
+  }
+  #div-c { height: 200px; }
+  #div-d { height: 200px; }
+  #div-e {height: 250px; }
+  #div-f {height: 250px; }
+  #div-g {height: 250px; }
+  #div-h {height: 250px; }
+  #div-i {height: 150px; }
+  #div-c, #div-d, #div-e, #div-g, #div-i {
+    border-left: none;
+  }
+}
