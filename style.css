@@ -39,12 +39,12 @@ body {
 
 /* MOBILE */
 #wrapper {
-  margin: 30px auto;
-  width: 480px;
+  margin: auto;
+  width: 100%;
 }
 
-.col-m-1 { width: 240px; }
-.col-m-2 { width: 480px; }
+.col-m-1 { width: 50%; }
+.col-m-2 { width: 100%; }
 
 #div-a {
   height: 75px;
@@ -63,6 +63,7 @@ body {
 @media only screen and (min-width: 980px) {
   /* My web design ethics is not compatible with having a breakpoint at 800px when the layout is 960px wide; please consult me for more information. I'm happy to create a new breakpoint for you for screen widths between 800-960px if you wish, at no charge. */
   #wrapper {
+    margin: 30px auto;
     width: 960px;
   }
 
